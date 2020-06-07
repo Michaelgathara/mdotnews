@@ -41,20 +41,26 @@ switchTumblerHandler();
 if(theme == 'dark') {
     toggleNightMode();
 }
-var f = 'https://newsapi.org/v2/top-headlines?country=us&apiKey='+process.env.NEWS_API;
+// Only change things below this line, The things above this line are for site functionality
+var fetchLink = 'news.json';
+var temp = "<tr>";
+//Skip creates a line break
 function skip() {
     temp += "<br>";
 }
+//Opens the div where the news will be stored
 function openTempTd() {
     temp += "<div class='article'>";
 }
+//This one closes the div where the news is stored thus to stop
 function closeTempTd() {
     temp += "</div>";
 }
-var temp = "<tr>";
+//appendHr puts a horizontal line in the page
 function appendHr() {
     temp += "<hr>"
 }
+//The appendSource method takes the source and gives it a bias rating
 function appendSource(element,elementTime) {
     if(element == null || element == undefined || element == "null") {
         temp +="Unkown Source";
@@ -71,6 +77,7 @@ function appendSource(element,elementTime) {
         temp += String(da);
     }
 }
+//appendTemp is the main function, It takes any string and puts it on the page
 function appendTemp(element) {
     if(element == null || element == "null" || element == undefined) {
         temp += "Unknown";
@@ -78,6 +85,7 @@ function appendTemp(element) {
         temp += element;
     }
 }
+//appendLink puts in a link as a button at the bottom of the div. We set the article link to it so users can visit the news article. It has two parameters, the first one is the link, the second one is the text of the link
 function appendLink(element,element2) {
     if(element == null || element == "null") {
         element = "Redacted Link";
@@ -90,6 +98,7 @@ function appendLink(element,element2) {
     temp += element2;
     temp += "</a>";
 } 
+//appendMore is the button at the bottom of each article that takes the user to the article they requested
 function appendMore(element) {
     if(element == null || element == "null") {
         element = "Redacted Link";
@@ -102,15 +111,19 @@ function appendMore(element) {
     temp += "</a>";
     temp += "</div>";
 }
+//appendImage works with image urls to put in images to the site
 function appendImage(element) {
     temp += "<div class='imageDiv'>";
     temp += "<img class='articleImage' src='" + element + "' alt='"+element+"'>";
     temp += "</div>";
 }
-fetch(f).then((resp) => resp.json()).then(function(data) {
+//
+fetch(fetchLink).then((resp) => resp.json()).then(function(data) {
     var allDataRet = JSON.stringify(data);
     var allData = JSON.parse(allDataRet);
+    //This loop no longer works cause this is from the old site, not the new one
     allData.articles.forEach(element => {
+        //Function calls
         openTempTd();
         appendSource(element.source.name,element.publishedAt);
         appendHr();
