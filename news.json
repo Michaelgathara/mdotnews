@@ -1,81 +1,127 @@
 {
     "data": [
         {
-            "news_url": "https://www.cnbc.com/2020/05/31/investors-are-dangerously-downplaying-virus-trade-risks-meghan-shue.html",
-            "image_url": "https://cdn.snapi.dev/images/v1/q/6/106389433-1590789552824lab.jpg",
-            "title": "Investors are dangerously downplaying coronavirus and trade risks, Wilmington Trust's Meghan Shue warns",
-            "text": "Just as the economy is trying to reopen, Wilmington Trust's Meghan Shue sees trouble facing stocks.",
-            "source_name": "CNBC",
-            "date": "Sun, 31 May 2020 17:02:15 -0400",
+            "news_url": "https://www.reuters.com/article/us-usa-fed/with-crisis-response-in-place-fed-looks-to-long-term-idUSKBN23H0I3",
+            "image_url": "https://cdn.snapi.dev/images/v1/t/b/m02d20200610t2i1521717183rlynxmpeg590b5w640.jpg",
+            "title": "With crisis response in place, Fed looks to long term",
+            "text": "The Federal Reserve completes its latest policy meeting on Wednesday with attention turning from its massive response to the coronavirus pandemic and toward its still-developing plans to strengthen and lengthen a nascent economic recovery.",
+            "source_name": "Reuters",
+            "date": "Wed, 10 Jun 2020 00:07:24 -0400",
             "topics": [],
             "sentiment": "Negative",
-            "type": "Article"
+            "type": "Article",
+            "news_id": 376197,
+            "rank_score": "4.74"
         },
         {
-            "news_url": "https://www.seeitmarket.com/5-reasons-the-stock-market-is-poised-for-a-selloff/",
-            "image_url": "https://cdn.snapi.dev/images/v1/w/e/wedew222-5.jpg",
-            "title": "5 Reasons The Stock Market Is Poised For A Selloff",
-            "text": "U.S. Stock Market Trading Outlook (3-5 Days):\u00a0\u00a0Bearish I expect US stock markets have begun a short-term topping process\u00a0that should result in a 5 percent decline in stocks into early or mid-June. I plan to sell into strength over the short-term.",
-            "source_name": "See It Market",
-            "date": "Sun, 31 May 2020 16:42:05 -0400",
-            "topics": [],
+            "news_url": "https://www.reuters.com/article/us-global-oil/oil-falls-as-u-s-inventory-rise-revives-oversupply-concerns-idUSKBN23H06H",
+            "image_url": "https://cdn.snapi.dev/images/v1/g/b/m02d20200610t2i1521707415rlynxmpeg5903sw640.jpg",
+            "title": "Oil falls as U.S. inventory rise revives oversupply concerns",
+            "text": "Oil prices fell on Wednesday after data showed a rise in crude and fuel stockpiles in the United States, reviving concerns about oversupply and falling fuel demand in the world's largest crude consumer amid the coronavirus outbreak.",
+            "source_name": "Reuters",
+            "date": "Tue, 09 Jun 2020 23:57:58 -0400",
+            "topics": [
+                "oil"
+            ],
             "sentiment": "Negative",
-            "type": "Article"
+            "type": "Article",
+            "news_id": 376195,
+            "rank_score": "4.42"
         },
         {
-            "news_url": "http://www.gurufocus.com/news/1151951/what-investing-and-gambling-have-in-common-part-2",
-            "image_url": "https://cdn.snapi.dev/images/v1/n/g/fjhgtr2-1.jpg",
-            "title": "What Investing and Gambling Have in Common, Part 2",
-            "text": "Introduction",
-            "source_name": "GuruFocus",
-            "date": "Sun, 31 May 2020 16:16:34 -0400",
-            "topics": [],
+            "news_url": "https://www.youtube.com/watch?v=QyYbGNoOSNY",
+            "image_url": "https://cdn.snapi.dev/images/v1/k/x/opec-deal-will-bring-some-sort-of-normality-by-end-of-year-nnpcs-kyari.jpg",
+            "title": "OPEC+ Deal Will Bring Some Sort of Normality By End of Year: NNPC\u2019s Kyari",
+            "text": "Mallam Mele Kolo Kyari, managing director at Nigerian National Petroleum Corp. Group, says the OPEC+ production cut deal was necessary to re-balance the oil market and move Brent prices towards $42 to $45 a barrel by the end of the year. The oil executive also insists his company will not cut jobs this year. He speaks exclusively to Bloomberg\u2019s Manus Cranny.",
+            "source_name": "Bloomberg Markets and Finance",
+            "date": "Tue, 09 Jun 2020 23:12:31 -0400",
+            "topics": [
+                "oil"
+            ],
             "sentiment": "Neutral",
-            "type": "Article"
+            "type": "Video",
+            "news_id": 376189,
+            "rank_score": "3.87"
         },
         {
-            "news_url": "https://www.seeitmarket.com/may-monthly-stock-market-update-and-economic-commentary/",
-            "image_url": "https://cdn.snapi.dev/images/v1/l/a/m02d20191127t2i1457385542rlynxmpefaq199w640.jpg",
-            "title": "May Monthly Stock Market Update and Economic Commentary",
-            "text": "Stocks rose sharply\u00a0in May with the S&P 500 Index INDEXSP: .INX gaining 4.5% while the Dow Jones Industrial Average added 4.3%. The NASDAQ Composite INDEXNASDAQ: .IXIC rose 6.8% and the Russell climbed nearly 7%.",
-            "source_name": "See It Market",
-            "date": "Sun, 31 May 2020 15:29:41 -0400",
-            "topics": [],
-            "sentiment": "Neutral",
-            "type": "Article"
-        },
-        {
-            "news_url": "https://www.seeitmarket.com/is-the-recent-stock-market-rally-a-sign-of-strength-or-reaction-to-weakness/",
-            "image_url": "https://cdn.snapi.dev/images/v1/m/0/etf39.jpg",
-            "title": "Is the Recent Stock Market Rally a Sign of Strength or Reaction to Weakness?",
-            "text": "Key Stock Market Takeaways: \u2013\u00a0\u00a0Strength that fails to overcome weakness can lack follow through \u2013\u00a0\u00a0Evidence suggests bear market has run its course \u2013\u00a0\u00a0Additional breadth thrusts can fuel further gains After experiencing its largest quarterly decline in over a decade in the first quarter of 2020, the S&P 500 Index INDEXSP: .INX is on pace to [\u2026]\nThe post Is the Recent Stock Market Rally a Sign of Strength or Reaction to Weakness? appeared first on See It Market.",
-            "source_name": "See It Market",
-            "date": "Sun, 31 May 2020 15:09:36 -0400",
-            "topics": [],
-            "sentiment": "Neutral",
-            "type": "Article"
-        },
-        {
-            "news_url": "https://www.forbes.com/sites/tomaspray/2020/05/31/sp-500-again-tops-3000-are-new-highs-next/",
-            "image_url": "https://cdn.snapi.dev/images/v1/7/k/sp-500-again-tops-3000-are-new-highs-next.jpg",
-            "title": "S&P 500 Again Tops 3,000: Are New Highs Next?",
-            "text": "It was another good week in the market last week, with strong advance/decline numbers and widespread optimism in the economic recovery. Tom explores what this means for market risk and investor sentiment as we head into June.",
-            "source_name": "Forbes",
-            "date": "Sun, 31 May 2020 13:38:30 -0400",
+            "news_url": "https://www.reuters.com/article/us-global-markets/asian-shares-creep-higher-as-markets-wait-for-fed-idUSKBN23H00V",
+            "image_url": "https://cdn.snapi.dev/images/v1/i/n/m02d20200610t2i1521701764rlynxmpeg5900dw640.jpg",
+            "title": "Asian shares creep higher as markets wait for Fed",
+            "text": "Asian stock markets eked out a 10th consecutive session of gains on Wednesday, but momentum ebbed as doubts about the global recovery from the pandemic returned ahead of the U.S. Federal Reserve meeting.",
+            "source_name": "Reuters",
+            "date": "Tue, 09 Jun 2020 23:07:47 -0400",
             "topics": [],
             "sentiment": "Positive",
-            "type": "Article"
+            "type": "Article",
+            "news_id": 376187,
+            "rank_score": "4.74"
         },
         {
-            "news_url": "https://www.youtube.com/watch?v=C7ECFUI-vfA",
-            "image_url": "https://cdn.snapi.dev/images/v1/m/q/long-time-china-advisor-robert-kuhn-on-trumps-move-to-eliminate-special-treatment-for-hong-kong.jpg",
-            "title": "Long-time China advisor Robert Kuhn on Trump's move to eliminate special treatment for Hong Kong",
-            "text": "Robert Kuhn, long-time advisor to the Chinese government, joins \u201cClosing Bell\u201d to discuss what\u2019s at stake as Trump moves to eliminate special treatment for Hong Kong.",
-            "source_name": "CNBC Television",
-            "date": "Fri, 29 May 2020 16:49:00 -0400",
+            "news_url": "https://www.reuters.com/article/us-global-oil/oil-drops-after-u-s-inventory-build-renews-oversupply-concerns-idUSKBN23H06H",
+            "image_url": "https://cdn.snapi.dev/images/v1/1/l/m02d20200610t2i1521707415rlynxmpeg5903sw640.jpg",
+            "title": "Oil drops after U.S. inventory build renews oversupply concerns",
+            "text": "Oil prices fell on Wednesday as an industry report showed a rise in crude and fuel inventories in the United States, renewing concerns about oversupply and slumping fuel demand in the world's largest crude consumer.",
+            "source_name": "Reuters",
+            "date": "Tue, 09 Jun 2020 21:42:43 -0400",
+            "topics": [
+                "oil"
+            ],
+            "sentiment": "Negative",
+            "type": "Article",
+            "news_id": 376173,
+            "rank_score": "4.42"
+        },
+        {
+            "news_url": "https://www.reuters.com/article/us-funds-doubleline/doublelines-gundlach-bearish-on-u-s-dollar-says-stocks-lofty-idUSKBN23H05W",
+            "image_url": "https://cdn.snapi.dev/images/v1/l/n/m02d20200610t2i1521706967rlynxmpeg59038w640.jpg",
+            "title": "DoubleLine's Gundlach bearish on U.S. dollar, says stocks 'lofty'",
+            "text": "The U.S. dollar is unlikely to make significant moves higher in the near term because of the ballooning budget deficit, Jeffrey Gundlach, the billionaire chief executive of DoubleLine Capital, said on a webcast presentation on Tuesday.",
+            "source_name": "Reuters",
+            "date": "Tue, 09 Jun 2020 21:38:15 -0400",
             "topics": [],
-            "sentiment": "Neutral",
-            "type": "Video"
+            "sentiment": "Negative",
+            "type": "Article",
+            "news_id": 376171,
+            "rank_score": "4.74"
+        },
+        {
+            "news_url": "https://www.reuters.com/article/us-global-forex/dollar-nurses-losses-amid-caution-ahead-of-fed-idUSKBN23H02U",
+            "image_url": "https://cdn.snapi.dev/images/v1/x/o/m02d20200610t2i1521703205rlynxmpeg59010w640.jpg",
+            "title": "Dollar nurses losses amid caution ahead of Fed",
+            "text": "The dollar nursed losses against most currencies on Wednesday amid some speculation the U.S. Federal Reserve could take steps to curb a recent rise in bond yields at its policy meeting.",
+            "source_name": "Reuters",
+            "date": "Tue, 09 Jun 2020 20:46:26 -0400",
+            "topics": [],
+            "sentiment": "Negative",
+            "type": "Article",
+            "news_id": 376160,
+            "rank_score": "4.74"
+        },
+        {
+            "news_url": "https://www.reuters.com/article/us-china-usa-ipo/chinese-companies-put-u-s-listing-plans-on-ice-as-tensions-mount-idUSKBN23H01U",
+            "image_url": "https://cdn.snapi.dev/images/v1/m/0/m02d20200610t2i1521702566rlynxmpeg5900pw640.jpg",
+            "title": "Chinese companies put U.S. listing plans on ice as tensions mount",
+            "text": "Chinese companies are putting off plans for U.S. listings as tensions between the world's top two economies rise, lawyers, bankers, accountants and regulators involved in what has been a major capital-raising route told Reuters.",
+            "source_name": "Reuters",
+            "date": "Tue, 09 Jun 2020 20:36:16 -0400",
+            "topics": [],
+            "sentiment": "Negative",
+            "type": "Article",
+            "news_id": 376158,
+            "rank_score": "4.74"
+        },
+        {
+            "news_url": "https://www.cnbc.com/2020/06/10/trump-wants-to-delist-chinese-companies-but-wall-street-could-oppose.html",
+            "image_url": "https://cdn.snapi.dev/images/v1/1/0/105773931-1551733672438gettyimages-455722026.jpeg",
+            "title": "Trump wants to delist Chinese companies from U.S. exchanges. That could hurt Wall Street",
+            "text": "A new bill that targets Chinese companies listed on U.S. exchanges could not only \"backfire\" on American investors, and Wall Street could oppose it, a Harvard professor told CNBC on Tuesday.",
+            "source_name": "CNBC",
+            "date": "Tue, 09 Jun 2020 20:00:28 -0400",
+            "topics": [],
+            "sentiment": "Negative",
+            "type": "Article",
+            "news_id": 376157,
+            "rank_score": "7.03"
         }
     ]
 }
