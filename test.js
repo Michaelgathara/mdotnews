@@ -64,6 +64,7 @@ function closeTempTd() {
 function appendHr() {
     temp += "<hr>"
 }
+//Appends videos from YT if the type of news is video
 function appendVideo(element) {
     var videoEmbedLinkId = element.replace('https://www.youtube.com/watch?v=',''); 
     temp += '<iframe width="100%" height="550" src="https://www.youtube.com/embed/'+videoEmbedLinkId+'" style="border-radius: 16px;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
@@ -127,7 +128,7 @@ function appendTime(element) {
     temp += String(da);
 }
 //Getting the data and displaying it
-fetch('https://stocknewsapi.com/api/v1/category?section=general&items=30&extra-fields=id,rankscore&token='+c192, {
+fetch(fetchLink, {
     method: 'GET',
     mode: 'cors',
     headers: {
