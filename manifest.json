@@ -3,12 +3,14 @@
     "name": "MDot Market News",
     "icons" : [
         {
-            "src": "/images/android-chrome-192x192.png",
+            "src": "images/android-chrome-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         }
     ],
     "start_url": "index.html",
     "display": "standalone",
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "theme_color": "black",
+    "background_color": "black"
 }

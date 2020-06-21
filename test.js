@@ -137,29 +137,36 @@ fetch(fetchLink, {
     }
 }).then(response => response.json()).then(function(data){
     var dictNewsData = data.data;
+    var rankedNewsData = data.data.rank_score;
+    // rankedNewsData.forEach(element => {
+    //     var arrayFromRankScores = Array.from(element).sort(function(a,b){
+    //         return a - b;
+    //     });
+    //     console.log(arrayFromRankScores);
+    // })
     dictNewsData.forEach(element => {
-            openTempTd();
-            appendSource(element.source_name);
-            appendTime(element.date);
-            appendHr();
-            appendTemp("<p class='start'> </p>" + "<span class='newsTitle'>"+element.title+"</span>");
-            skip();
-            skip();
-            if(element.type == 'Video') {
-                appendVideo(element.news_url);
-            } else {
-                appendImage(element.image_url);
-            }
-            skip();
-            skip();
-            appendTemp("<p class='start'>Sentiment Rating: </p>"+element.sentiment);
-            appendTemp("<p class='start'>Quick Look: </p>"+element.text);
-            skip();
-            skip();
-            appendMore(element.news_url)
-            skip();
-            closeTempTd();
-            document.getElementById('newsTable').innerHTML = temp + "</div>";
+        openTempTd();
+        appendSource(element.source_name);
+        appendTime(element.date);
+        appendHr();
+        appendTemp("<p class='start'> </p>" + "<span class='newsTitle'>"+element.title+"</span>");
+        skip();
+        skip();
+        if(element.type == 'Video') {
+            appendVideo(element.news_url);
+        } else {
+            appendImage(element.image_url);
+        }
+        skip();
+        skip();
+        appendTemp("<p class='start'>Sentiment Rating: </p>"+element.sentiment);
+        appendTemp("<p class='start'>Quick Look: </p>"+element.text);
+        skip();
+        skip();
+        appendMore(element.news_url)
+        skip();
+        closeTempTd();
+        document.getElementById('newsTable').innerHTML = temp + "</div>";
     })
 }).catch(function(error){
     console.error('Looks like we done did goofed mate: \n', error);
@@ -170,3 +177,15 @@ fetch(fetchLink, {
     closeTempTd();
     document.getElementById('newsTable').innerHTML = temp + "</div>";
 });
+//Progressive Web App Installation Testing 
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+        navigator.serviceWorker.register('test.js').then(function(registration) {
+        // Registration was successful
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+        // registration failed :(
+        console.log('ServiceWorker registration failed: ', err);
+        });
+    });
+}
