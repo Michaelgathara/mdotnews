@@ -39,6 +39,27 @@ switchTumblerHandler();
 if(theme == 'dark') {
     toggleNightMode();
 }
+// function generate(num) {
+//     let generatedTicker = "";
+//     let alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+//     for(i = 0; i <= num; i++) {
+//         var letter = alphabet[Math.floor(Math.random() * alphabet.length)];
+//         generatedTicker+=letter;
+//     }
+//     document.getElementById('genTicker').innerHTML = generatedTicker;
+// }
+Array.prototype.choice = function(){
+    return this[~~(Math.random()*this.length)];
+};
+function generate(){
+    var compiledTicker = [];
+    fetch('nasdaq.txt').then(response => response.text()).then(function(readData) {
+        compiledTicker.push(readData.split('\n'));
+        console.log(compiledTicker[Math.random() * compiledTicker.length-1]);
+    });
+    
+    document.getElementById('genTicker').innerHTML = compiledTicker.choice();
+}
 const installApp = () => {
     
 }
