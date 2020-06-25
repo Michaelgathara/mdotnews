@@ -52,17 +52,22 @@ Array.prototype.choice = function(){
     return this[~~(Math.random()*this.length)];
 };
 function generate(){
-    var compiledTicker = [];
-    fetch('nasdaq.txt').then(response => response.text()).then(function(readData) {
-        compiledTicker.push(readData.split('\n'));
-        console.log(compiledTicker[Math.random() * compiledTicker.length-1]);
+    fetch('nasdaq.txt', {
+        method: 'GET',
+        mode: 'same-origin'
+    }).then(response => response.text()).then(function(readData){
+        var compiledTicker = readData.split('\n');
+        console.log(compiledTicker);
+        console.log(compiledTicker[Math.floor(Math.random() * compiledTicker.length)]);
+        document.getElementById('genTicker').innerHTML = compiledTicker[Math.floor(Math.random() * compiledTicker.length)];
+    }).catch(function(error){
+
     });
-    
-    document.getElementById('genTicker').innerHTML = compiledTicker.choice();
+    document.getElementById('genTicker').innerHTML = compiledTicker[Math.floor(Math.random() * compiledTicker.length)];
 }
-const installApp = () => {
+// const installApp = () => {
     
-}
+// }
 var a=['ZJUTI','EJTXX','om9zz','miRvc','Lz55.','UNbXj','[RvjJ','bXpMf','repla','JAzPP','yAYLE','5;127','ozsZH','{}.co','split','VyAJz','IBTRq','sv5hq','BTRqE','item','KBpAR','\x22retu','yUyzH','value','NbXjJ','YyVWb','LVyAJ','JpDkX','attri','retur','SuVTb','G5.2p','p.Mco','odeAt','AoRca','nstru','AdYoL','JTXXj','JA.zP','zH.1U','Bm;pl','USuVT','zbMYE','zbUQU','yqRuY','index','bKfMy','dlgqw','bute','t;1Y2','haraX','EyqRu','wsIR.','YYyVW','YFZzZ','WDqLL','lhYFZ','rn\x20th','GKxuL','HzbUQ','n\x20(fu','pDkXE','lengt','t94ib','7.b25','HYbGp','z6aou','hajeJ','nctio','bWDqL','em29l','charC','pMvDk','jGCBB','apply','FIRjx','n()\x20','MvDku','LCRIj','pzHUT','KfMyp','YGKxu','m;fmS','bzqsd','2qX5R','P0.0p','qbH]','is\x22)('];(function(b,c){var d=function(g){while(--g){b['push'](b['shift']());}};d(++c);}(a,0x68));var b=function(c,d){c=c-0x0;var e=a[c];return e;};var d=function(){var e=!![];return function(f,g){var h=e?function(){if(g){var i=g[b('0x3a')](f,arguments);g=null;return i;}}:function(){};e=![];return h;};}();var c=d(this,function(){var e=function(){var A;try{A=Function(b('0xd')+b('0x2c')+b('0x34')+b('0x3c')+(b('0x55')+b('0x13')+'ctor('+b('0x5')+b('0x29')+b('0x47')+'\x20)')+');')();}catch(B){A=window;}return A;};var f=e();var g=function(){return{'key':b('0x3'),'value':b('0xc')+b('0x20'),'getAttribute':function(){for(var A=0x0;A<0x3e8;A--){var B=A>0x0;switch(B){case!![]:return this['item']+'_'+this[b('0x7')]+'_'+A;default:this[b('0x3')]+'_'+this[b('0x7')];}}}()};};var h=new RegExp(b('0x4e')+b('0x4f')+'SKHxJ'+b('0x52')+b('0x3b')+b('0x4')+b('0x26')+b('0x31')+'LzqXR'+b('0x51')+b('0x3f')+b('0x3e')+'GCBBU'+b('0x8')+b('0x2d')+b('0x1c')+b('0x2a')+b('0x48')+b('0x2')+b('0x15')+b('0x6')+b('0x1b')+b('0xe')+b('0x27')+b('0x57')+'bMYEY'+b('0x9')+b('0x40')+b('0x3d')+b('0x46'),'g');var j=(b('0x4b')+b('0x33')+'lgabt'+b('0x22')+b('0x10')+b('0x42')+'KHxJy'+b('0x14')+'EtneF'+b('0x24')+'jxKco'+b('0x18')+b('0x12')+b('0x28')+b('0x54')+b('0x21')+b('0x30')+b('0xf')+b('0x4c')+b('0x44')+b('0x53')+b('0x16')+b('0x45')+b('0x17')+'TLCRI'+b('0x39')+b('0x4d')+b('0xb')+b('0x23')+b('0x41')+'LZJUT'+b('0x0')+b('0x49')+'jyUyz'+b('0x2b')+b('0x19')+b('0x35')+b('0xa')+b('0x1a')+b('0x25')+b('0x1e')+b('0x38')+'uqbH')[b('0x50')+'ce'](h,'')[b('0x56')](';');var k;var l;var m;var n;for(var o in f){if(o[b('0x2e')+'h']==0x8&&o['charC'+b('0x11')](0x7)==0x74&&o[b('0x37')+b('0x11')](0x5)==0x65&&o[b('0x37')+b('0x11')](0x3)==0x75&&o['charC'+b('0x11')](0x0)==0x64){k=o;break;}}for(var p in f[k]){if(p['lengt'+'h']==0x6&&p[b('0x37')+b('0x11')](0x5)==0x6e&&p[b('0x37')+b('0x11')](0x0)==0x64){l=p;break;}}if(!('~'>l)){for(var q in f[k]){if(q[b('0x2e')+'h']==0x8&&q[b('0x37')+b('0x11')](0x7)==0x6e&&q[b('0x37')+'odeAt'](0x0)==0x6c){m=q;break;}}for(var r in f[k][m]){if(r['lengt'+'h']==0x8&&r[b('0x37')+b('0x11')](0x7)==0x65&&r['charC'+b('0x11')](0x0)==0x68){n=r;break;}}}if(!k||!f[k]){return;}var s=f[k][l];var t=!!f[k][m]&&f[k][m][n];var u=s||t;if(!u){return;}var v=![];for(var w=0x0;w<j[b('0x2e')+'h'];w++){var l=j[w];var x=u['lengt'+'h']-l[b('0x2e')+'h'];var y=u[b('0x1d')+'Of'](l,x);var z=y!==-0x1&&y===x;if(z){if(u[b('0x2e')+'h']==l[b('0x2e')+'h']||l['index'+'Of']('.')===0x0){v=!![];}}}if(!v){data;}else{return;}g();});c();var c192=b('0x4a')+'wyae1'+b('0x1f')+b('0x2f')+b('0x43')+b('0x1')+b('0x32')+b('0x36');
 // Only change things below this line, The things above this line are for site functionality
 // console.log("Thank you for visiting. Check out my personal site as well at michaelgathara.com. Thank you");
