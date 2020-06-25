@@ -48,16 +48,12 @@ if(theme == 'dark') {
 //     }
 //     document.getElementById('genTicker').innerHTML = generatedTicker;
 // }
-Array.prototype.choice = function(){
-    return this[~~(Math.random()*this.length)];
-};
 function generate(){
     fetch('nasdaq.txt', {
         method: 'GET',
         mode: 'same-origin'
     }).then(response => response.text()).then(function(readData){
         var compiledTicker = readData.split('\n');
-        console.log(compiledTicker);
         console.log(compiledTicker[Math.floor(Math.random() * compiledTicker.length)]);
         document.getElementById('genTicker').innerHTML = compiledTicker[Math.floor(Math.random() * compiledTicker.length)];
     }).catch(function(error){
