@@ -39,31 +39,32 @@ switchTumblerHandler();
 if(theme == 'dark') {
     toggleNightMode();
 }
-// function generate(num) {
-//     let generatedTicker = "";
-//     let alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-//     for(i = 0; i <= num; i++) {
-//         var letter = alphabet[Math.floor(Math.random() * alphabet.length)];
-//         generatedTicker+=letter;
-//     }
-//     document.getElementById('genTicker').innerHTML = generatedTicker;
-// }
-Array.prototype.choice = function(){
-    return this[~~(Math.random()*this.length)];
-};
 function generate(){
     fetch('nasdaq.txt', {
         method: 'GET',
         mode: 'same-origin'
     }).then(response => response.text()).then(function(readData){
-        var compiledTicker = readData.split('\n');
-        console.log(compiledTicker);
-        console.log(compiledTicker[Math.floor(Math.random() * compiledTicker.length)]);
-        document.getElementById('genTicker').innerHTML = compiledTicker[Math.floor(Math.random() * compiledTicker.length)];
+        let compiledTicker = readData.split('\n');
+        let ranNum = Math.floor(Math.random() * compiledTicker.length);
+        let generatedTicker = compiledTicker[ranNum];
+        //get index of the object and feed it, find out where the nasdaq and nyse line meet and feed it- 3583
+        document.getElementById('genTicker').innerHTML = generatedTicker;
+        let splitTicker = generatedTicker.match(/^(\S+)\s(.*)/).slice(1);
+        let exchange;
+        if(ranNum >= 3583) {
+            exchange = "NYSE-";
+        } else {
+            exchange = "NASDAQ-";
+        }
+        let ticker = splitTicker[0];
+        let graph = '<div id="tradingview_36ee2" style="height: 500px; width: 100%; border-radius: 16px;"></div><div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/'+exchange+ticker+'/" rel="noopener" target="_blank"><span class="blue-text">'+ticker+' Chart</span></a> by TradingView</div> <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script> <script type="text/javascript">new TradingView.widget({autosize:!0,symbol:"'+exchange+ticker+'",interval:"D",timezone:"Etc/UTC",theme:"dark",style:"1",locale:"en",toolbar_bg:"#f1f3f6",enable_publishing:!1,allow_symbol_change:!0,container_id:"tradingview_36ee2"});</script>';
+        document.getElementById('tradingview-widget-container').innerHTML = graph;
     }).catch(function(error){
 
     });
-    document.getElementById('genTicker').innerHTML = compiledTicker[Math.floor(Math.random() * compiledTicker.length)];
+    //what even am I doing
+    
+
 }
 // const installApp = () => {
     
@@ -153,7 +154,7 @@ function appendTime(element) {
     temp += String(da);
 }
 //Getting the data and displaying it
-fetch('https://stocknewsapi.com/api/v1/category?section=general&items=30&extra-fields=id,rankscore&token='+c192, {
+fetch('https://stocknewsapi.com/api/v1/category?section=general&items=30&extra-fields=id,rankscore&token='+c19, {
     method: 'GET',
     mode: 'cors',
     headers: {
