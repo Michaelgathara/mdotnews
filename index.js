@@ -50,8 +50,8 @@ function generate(){
         //get index of the object and feed it, find out where the nasdaq and nyse line meet and feed it- 3583
         document.getElementById('genTicker').innerHTML = generatedTicker;
         let splitTicker = generatedTicker.match(/^(\S+)\s(.*)/).slice(1);
-        let exchangeDash;
-        let exchangeDot;
+        var exchangeDash = "";
+        var exchangeDot = "";
         if(ranNum >= 3583) {
             exchangeDash = "NYSE-";
             exchangeDot = "NYSE:";
@@ -61,14 +61,13 @@ function generate(){
         }
         let ticker = splitTicker[0];
         console.log(ticker);
-        let graph = '<div id="tradingview_36ee2" style="height: 500px; width: 100%; border-radius: 16px;"></div><div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-TSLA/" rel="noopener" target="_blank"><span class="blue-text">'+ticker+' Chart</span></a> by TradingView</div> <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script> <script type="text/javascript">new TradingView.widget({autosize:!0,symbol:"NASDAQ:TSLA",interval:"D",timezone:"Etc/UTC",theme:"dark",style:"1",locale:"en",toolbar_bg:"#f1f3f6",enable_publishing:!1,allow_symbol_change:!0,container_id:"tradingview_36ee2"});</script>';
+        console.log("https://www.tradingview.com/symbols/"+exchangeDash+ticker+"/");
+        var graph = '<div class="tradingview-widget-container__widget"></div><div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/'+exchangeDash+ticker+'/" rel="noopener" target="_blank"><span class="blue-text">'+ticker+' Quote</span></a> by TradingView</div> <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"'+exchangeDot+ticker+'","width":"100%","colorTheme":"dark","isTransparent":false,"locale":"en"}</script>';
         document.getElementById('tradingview-widget-container').innerHTML = graph;
     }).catch(function(error){
 
     });
     //what even am I doing
-    
-
 }
 // const installApp = () => {
     
@@ -158,7 +157,7 @@ function appendTime(element) {
     temp += String(da);
 }
 //Getting the data and displaying it
-fetch('https://stocknewsapi.com/api/v1/category?section=general&items=30&extra-fields=id,rankscore&token='+c192, {
+fetch('https://stocknewsapi.com/api/v1/category?section=general&items=30&extra-fields=id,rankscore&token='+c19, {
     method: 'GET',
     mode: 'cors',
     headers: {
