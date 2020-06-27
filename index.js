@@ -50,14 +50,18 @@ function generate(){
         //get index of the object and feed it, find out where the nasdaq and nyse line meet and feed it- 3583
         document.getElementById('genTicker').innerHTML = generatedTicker;
         let splitTicker = generatedTicker.match(/^(\S+)\s(.*)/).slice(1);
-        let exchange;
+        let exchangeDash;
+        let exchangeDot;
         if(ranNum >= 3583) {
-            exchange = "NYSE-";
+            exchangeDash = "NYSE-";
+            exchangeDot = "NYSE:";
         } else {
-            exchange = "NASDAQ-";
+            exchangeDash = "NASDAQ-";
+            exchangeDot = "NASDAQ:";
         }
         let ticker = splitTicker[0];
-        let graph = '<div id="tradingview_36ee2" style="height: 500px; width: 100%; border-radius: 16px;"></div><div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/'+exchange+ticker+'/" rel="noopener" target="_blank"><span class="blue-text">'+ticker+' Chart</span></a> by TradingView</div> <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script> <script type="text/javascript">new TradingView.widget({autosize:!0,symbol:"'+exchange+ticker+'",interval:"D",timezone:"Etc/UTC",theme:"dark",style:"1",locale:"en",toolbar_bg:"#f1f3f6",enable_publishing:!1,allow_symbol_change:!0,container_id:"tradingview_36ee2"});</script>';
+        console.log(ticker);
+        let graph = '<div id="tradingview_36ee2" style="height: 500px; width: 100%; border-radius: 16px;"></div><div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-TSLA/" rel="noopener" target="_blank"><span class="blue-text">'+ticker+' Chart</span></a> by TradingView</div> <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script> <script type="text/javascript">new TradingView.widget({autosize:!0,symbol:"NASDAQ:TSLA",interval:"D",timezone:"Etc/UTC",theme:"dark",style:"1",locale:"en",toolbar_bg:"#f1f3f6",enable_publishing:!1,allow_symbol_change:!0,container_id:"tradingview_36ee2"});</script>';
         document.getElementById('tradingview-widget-container').innerHTML = graph;
     }).catch(function(error){
 
