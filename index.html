@@ -65,8 +65,6 @@
                     <a href="mailto:michael@mdotnews.com?subject=Web" class="fa fa-envelope"> Email</a>
                 </li>
             </ul>
-            <p style="text-align: center;">To Advertise</p>
-            <p style="text-align: center; font-size: xx-small;"><a href="mailto:mike@mdotnews.com">mike@mdotnews.com</a></p>
             <br>
         </nav>
         <div class="mobileNavigation"></div>
@@ -85,12 +83,13 @@
         </div>
         <br>
         <div class="projectShowcase">
-           
-            <div class="tradingview-widget-container">
-                <div class="tradingview-widget-container__widget"></div>
-                <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener" target="_blank"><span class="blue-text">Quotes</span></a> by TradingView</div>
-                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" 
-                    async>
+            <div class="article" style="background: black;">
+                <p class="newsTitle">Market At A Glance</p>
+                <hr>
+                <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener" target="_blank"><span class="blue-text">Ticker Tape</span></a> by TradingView</div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
                         {
                             "symbols": [
                                 {
@@ -102,8 +101,8 @@
                                     "title": "Nasdaq 100"
                                 },
                                 {
-                                    "proName": "NYSE:DOW",
-                                    "title":"DOW Jones"
+                                    "proName": "FX_IDC:EURUSD",
+                                    "title": "EUR/USD"
                                 },
                                 {
                                     "proName": "BITSTAMP:BTCUSD",
@@ -114,15 +113,58 @@
                                     "title": "ETH/USD"
                                 },
                                 {
-                                    "description": "Apple Inc",
-                                    "proName": "NASDAQ:AAPL"
-                                }  
+                                    "description": "DOW 30",
+                                    "proName": "CURRENCYCOM:US30"
+                                },
+                                {
+                                    "description": "UK FTSE 100",
+                                    "proName": "CURRENCYCOM:UK100"
+                                },
+                                {
+                                    "description": "GER DAX Index",
+                                    "proName": "XETR:DAX"
+                                }
                             ],
-                        "colorTheme": "dark",
-                        "locale": "en"
-                    }
-                </script>
-            </div>       
+                            "colorTheme": "dark",
+                            "isTransparent": false,
+                            "displayMode": "adaptive",
+                            "locale": "en"
+                        }
+                    </script>
+                </div>   
+                <p class="newsTitle">Society at a glance</p>
+                <hr>
+                <li>Black Lives Matter</li>
+                <br><br>
+                <div class="bigBoy">
+                    <a target="_blank" href="https://blacklivesmatters.carrd.co/" class="expand">Useful Links</a>
+                    <a target="_blank" href="https://www.google.com/maps/d/viewer?ll=32.801414054365665%2C-81.88025007938654&z=6&mid=1W3fsF5-Mz3_KaBgVt2pU8BDY5GkawUN_" class="expand" style="margin-left:10px;">Protest Map</a>
+                    <br>
+                    <br>
+                </div>
+                <br>
+                <li>Coronavirus</li>
+                <div class="bigBoy">
+                    <a target="_blank" href="https://www.cdc.gov/coronavirus/2019-ncov/index.html" class="expand">Visit CDC</a>
+                    <a target="_blank" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019" class="expand" style="margin-left:10px;">Visit WHO</a>
+                    <br>
+                    <br>
+                </div>
+                <!-- TradingView Widget BEGIN -->
+                <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/COVID19-CONFIRMED_US/" rel="noopener" target="_blank"><span class="blue-text">CONFIRMED_US Quotes</span></a> by TradingView</div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                        {
+                            "symbol": "COVID19:CONFIRMED_US",
+                            "width": "100%",
+                            "colorTheme": "dark",
+                            "isTransparent": true,
+                            "locale": "en"
+                        }
+                    </script>
+                </div>
+            </div>
         </div>
         <br>
         <br>
