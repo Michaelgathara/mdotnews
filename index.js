@@ -157,7 +157,7 @@ function appendTime(element) {
     temp += String(da);
 }
 //Getting the data and displaying it
-fetch('https://stocknewsapi.com/api/v1/category?section=general&items=30&extra-fields=id,rankscore&token='+c192, {
+fetch('https://stocknewsapi.com/api/v1/category?section=general&items=30&extra-fields=id,rankscore&token='+c19, {
     method: 'GET',
     mode: 'cors',
     headers: {
