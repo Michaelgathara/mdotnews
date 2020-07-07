@@ -1,5 +1,6 @@
 # MDot News
-MDot News is a (market)news platform built with simplicity in mind. 
+MDot News is a (market)news platform built with simplicity in mind. <br>
+Mdot News is a template for building other web projects with images in mind
 
 ## Table of contents
 * [Features ](#features)
